@@ -1,5 +1,13 @@
 #include "Villians.h"
 
+Villian::Villian() : Base(){
+    weapon_type = "No";
+    evilDeed = "Unknown";
+    lair = "Unknown";
+    skillsCount = 0;  
+    cout << "Villian default constructor called for unknown villian"<< endl;
+}
+
 Villian::Villian(
     string a,
     string weapon, 

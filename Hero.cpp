@@ -1,5 +1,11 @@
 #include "Hero.h"
 
+Hero::Hero(): Base(){
+    weapon_type = "No";
+    skillsCount = 0;
+    cout << "Hero default constructor called for unknown hero"<< endl;
+}
+
 Hero::Hero(string a, string weapon) : Base(a) {
     weapon_type = weapon;
     skillsCount = 0;
