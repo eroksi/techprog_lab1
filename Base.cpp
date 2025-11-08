@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+#include "Base.h"
 class Base{
     private:
         string name;
