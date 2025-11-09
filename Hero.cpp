@@ -67,3 +67,12 @@ string Hero::getSkill(int index) const {
     }
     return "";
 }
+
+void Hero::removeSkill(int index) {
+    if (index < 0 || index >= skillsCount) return;
+    
+    for (int i = index; i < skillsCount - 1; i++) {
+        mainSkills[i] = mainSkills[i + 1];
+    }
+    skillsCount--;
+}

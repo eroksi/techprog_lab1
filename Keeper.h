@@ -27,5 +27,7 @@ class Keeper{
         void printALL() const;
         void saveToFile(const string& filename) const;
         void loadFromFile(const string& filename);
+        int getSize() const;
 
+        Base* getObject(int index) const;
 };

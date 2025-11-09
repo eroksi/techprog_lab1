@@ -32,6 +32,10 @@ Keeper::~Keeper(){
     cout << "Keeper destructor called" << endl;
 };
 
+int Keeper::getSize() const{
+     return size;
+} 
+
 void Keeper::resize(){
     int newCapacity = capacity * 2;
     Base** newArray = new Base*[newCapacity];
@@ -94,6 +98,17 @@ void Keeper::printALL() const{
     }
 };
 
+    Base* Keeper::getObject(int index) const {
+    if (index >= 0 && index < size) {
+        return dataArray[index];
+    }
+    return nullptr;
+}
+
+int Keeper::getSize() const {
+    return size;
+}
+
 void Keeper::saveToFile(const string& filename) const {
     ofstream file(filename);
     
@@ -142,7 +157,6 @@ void Keeper::loadFromFile(const string& filename) {
         return;
     }
     
-    // Очищаем текущие данные
     for (int i = 0; i < size; i++) {
         delete dataArray[i];
     }
@@ -150,7 +164,7 @@ void Keeper::loadFromFile(const string& filename) {
     
     int totalObjects;
     file >> totalObjects;
-    file.ignore(); // пропускаем перевод строки
+    file.ignore();
     
     for (int i = 0; i < totalObjects; i++) {
         string type, name;
