@@ -19,4 +19,8 @@ public:
     void setWeaponType(string weapon);
     string getWeaponType() const;
     void addSkill(string skill);
+
+    int getSkillsCount() const;                    
+    string getSkill(int index) const;              
+    void removeSkill(int index);  
 };

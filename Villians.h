@@ -29,4 +29,8 @@ class Villian: public Base{
         void setLair(string lairLocation);
         string getLair() const;
 
+        int getSkillsCount() const;
+        string getSkill(int index) const; 
+        void removeSkill(int index);
+
 };

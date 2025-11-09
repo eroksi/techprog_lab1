@@ -88,3 +88,23 @@ void Villian::setLair(string lairLocation){
 string Villian::getLair() const {
      return lair;
 }
+
+int Villian::getSkillsCount() const {
+    return skillsCount;
+}
+
+string Villian::getSkill(int index) const {
+    if (index >= 0 && index < skillsCount) {
+        return mainSkills[index];
+    }
+    return "";
+}
+
+void Villian::removeSkill(int index) {
+    if (index < 0 || index >= skillsCount) return;
+    
+    for (int i = index; i < skillsCount - 1; i++) {
+        mainSkills[i] = mainSkills[i + 1];
+    }
+    skillsCount--;
+}

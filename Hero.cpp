@@ -56,3 +56,14 @@ void Hero::addSkill(string skill) {
         skillsCount++;
     }
 }
+
+int Hero::getSkillsCount() const {
+    return skillsCount;
+}
+
+string Hero::getSkill(int index) const {
+    if (index >= 0 && index < skillsCount) {
+        return mainSkills[index];
+    }
+    return "";
+}
