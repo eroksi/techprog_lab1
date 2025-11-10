@@ -19,7 +19,8 @@ void editVillian(Villian* villian);
 void editMonster(Monster* monster);
 void saveToFile(Keeper& keeper);
 void loadFromFile(Keeper& keeper);
-
+//g++ -o myprogram main.cpp Base.cpp Hero.cpp Villians.cpp Monster.cpp Keeper.cpp
+//.\myprogram
 
 int main() {
     Keeper keeper;

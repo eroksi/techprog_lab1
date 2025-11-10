@@ -1,4 +1,7 @@
 
+#ifndef HERO_H
+#define HERO_H
+
 #include "Base.h"
 
 class Hero: public Base{
@@ -24,3 +27,4 @@ public:
     string getSkill(int index) const;              
     void removeSkill(int index);  
 };
+#endif

@@ -1,3 +1,6 @@
+#ifndef VILLIANS_H
+#define VILLIANS_H
+
 #include "Base.h"
 
 class Villian: public Base{
@@ -34,3 +37,4 @@ class Villian: public Base{
         void removeSkill(int index);
 
 };
+#endif

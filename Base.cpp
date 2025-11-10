@@ -1,39 +1,28 @@
-#include <iostream>
-#include <string>
-using namespace std;
 #include "Base.h"
-class Base{
-    private:
-        string name;
-    public:
 
-    virtual void print() const = 0; 
-    virtual string getType() const = 0; 
+Base::~Base(){
+    cout << "Base destructor called for: " << name << endl;
+}
 
-    virtual ~Base(){
-        cout << "Base destructor called for: " << name << endl;
-    }
+Base::Base(){
+    name = "Unknown";
+    cout << "Base default constructor called" << endl;
+}
 
-    Base(){
-        name = "Unknown";
-        cout << "Base default constructor called" << endl;
-    }
+Base::Base(string n){
+    name = n;
+    cout << "Base parameterized constructor called for: " << name << endl;
+}
 
-    Base(string n){
-        name = n;
-        cout << "Base parameterized constructor called for: " << name << endl;
-    }
+Base::Base(const Base& other){
+    name = other.name;
+    cout << "Base copy constructor called for: " << name << endl;
+}
 
-    Base(const Base& other){
-        name = other.name;
-        cout << "Base copy constructor called for: " << name << endl;
-    }
+string Base::getName() const{
+    return name;
+}
 
-    string getName() const{
-        return name;
-    }
-
-    void setName(string new_name){
-        name = new_name;
-    }
-};
+void Base::setName(string new_name){
+    name = new_name;
+}

@@ -83,30 +83,27 @@ void Keeper::remove(int index){
 };
 
 void Keeper::printALL() const{
-    cout << "Keeper Contests" << endl;
+    cout << "Keeper Contents" << endl;
     cout << "Total objects: " << size << endl;
 
     if (size == 0){
-        cout << "Keeper is empty(" << endl;
+        cout << "Keeper is empty" << endl;
+        return;
     }
-
 
     for (int i = 0; i < size; i++){
-        cout << i << ")";
-        cout << "Object type: " << dataArray[i]->getType();
-        cout << "; Object name: " << dataArray[i]->getName() << endl;
+        cout << "--- Object #" << i << " ---" << endl;
+        dataArray[i]->print();
+        cout << endl;
     }
+    cout << "======================" << endl;
 };
 
-    Base* Keeper::getObject(int index) const {
+Base* Keeper::getObject(int index) const {
     if (index >= 0 && index < size) {
         return dataArray[index];
     }
     return nullptr;
-}
-
-int Keeper::getSize() const {
-    return size;
 }
 
 void Keeper::saveToFile(const string& filename) const {

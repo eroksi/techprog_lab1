@@ -11,12 +11,12 @@ private:
 public:
     virtual void print() const = 0; 
     virtual string getType() const = 0; 
-
     virtual ~Base();
+    
     Base();
     Base(string n);
     Base(const Base& other);
-
+    
     string getName() const;
     void setName(string new_name);
 };

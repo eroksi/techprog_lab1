@@ -1,3 +1,6 @@
+#ifndef MONSTER_H
+#define MONSTER_H
+
 #include "Base.h"
 
 class Monster: public Base{
@@ -17,3 +20,4 @@ class Monster: public Base{
     void setAppearance(string appearance);
     string getAppearance() const;
 };
+#endif
